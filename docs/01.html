@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>我用 AI 把一门斯坦福课程翻成中文，全程 7 分 47 秒 · AI 协作实战笔记</title>
+<meta name="description" content="一份 21038 字符的英文学术原文，怎么在 7 分 47 秒内变成可核对的中文，以及三个把我卡住的坑。">
+<style>
+:root{--ink:#12151c;--sub:#5b6474;--line:#e3e7ee;--bg:#fbfcfe;--accent:#c2410c;--code:#f4f6fa}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:17px/1.85 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+ word-break:break-word}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.15rem 5rem}
+header.site{background:#12151c;color:#fff;padding:1.5rem 0 1.35rem}
+header.site .wrap{padding-bottom:0}
+header.site a{color:#fff;text-decoration:none}
+.brand{font-size:1.28rem;font-weight:700;letter-spacing:.02em}
+.tag{margin-top:.4rem;color:#9aa4b6;font-size:.9rem;line-height:1.6}
+.kicker{display:inline-block;margin-bottom:.75rem;padding:.16rem .6rem;border-radius:999px;
+ background:#fdece2;color:var(--accent);font-size:.78rem;font-weight:600;letter-spacing:.04em}
+article{padding-top:2.2rem}
+h1{font-size:1.62rem;line-height:1.45;margin:0 0 1.1rem;letter-spacing:-.01em}
+h2{font-size:1.2rem;margin:2.4rem 0 .85rem;padding-left:.62rem;border-left:4px solid var(--accent)}
+h3{font-size:1.04rem;margin:1.9rem 0 .6rem;color:#1f2937}
+p{margin:0 0 1.05rem}
+ul,ol{margin:0 0 1.15rem;padding-left:1.35rem}
+li{margin:.34rem 0}
+strong{font-weight:700}
+code{background:var(--code);padding:.12em .38em;border-radius:4px;font-size:.9em;
+ font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+pre{background:#12151c;color:#e6edf7;padding:1rem;border-radius:10px;overflow-x:auto;font-size:.86rem;line-height:1.65}
+pre code{background:none;color:inherit;padding:0;font-size:1em}
+blockquote{margin:0 0 1.15rem;padding:.7rem 1rem;background:#fff;border-left:4px solid var(--line);
+ color:var(--sub);border-radius:0 8px 8px 0}
+hr{border:none;border-top:1px solid var(--line);margin:2.2rem 0}
+table{width:100%;border-collapse:collapse;margin:0 0 1.3rem;font-size:.9rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:.5rem .62rem;text-align:left;vertical-align:top}
+th{background:#f2f5fa;font-weight:600}
+a{color:#1d4ed8;text-decoration:none;border-bottom:1px solid #c7d6f5}
+a:hover{color:var(--accent);border-color:var(--accent)}
+.card{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;
+ padding:1.15rem 1.2rem;margin:0 0 1rem;text-decoration:none;border-bottom:1px solid var(--line);
+ box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.card:hover{border-color:#c9d3e3;box-shadow:0 4px 14px rgba(16,24,40,.07)}
+.card h2{font-size:1.12rem;margin:.1rem 0 .45rem;border:none;padding:0}
+.card p{margin:0;color:var(--sub);font-size:.93rem;line-height:1.7}
+.meta{margin-top:.7rem;color:#8b95a7;font-size:.82rem}
+.navbar{margin:0 0 1.4rem;font-size:.9rem}
+.navbar a{border:none}
+footer{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.2rem;color:#8b95a7;font-size:.82rem;line-height:1.7}
+@media (max-width:480px){
+ body{font-size:16.5px;line-height:1.8}
+ h1{font-size:1.42rem}h2{font-size:1.12rem}
+ .wrap{padding-left:1rem;padding-right:1rem}
+}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="./index.html">AI 协作实战笔记</a>
+<div class="tag">把 C1–C6 真实做过的挑战，写成每个数字都能回源的文章</div>
+</div></header>
+<main class="wrap">
+<div class="navbar"><a href="./index.html">← 返回目录</a></div>
+<article><span class="kicker">工程流水线</span>
+<h1>我用 AI 把一门斯坦福课程翻成中文，全程 7 分 47 秒</h1>
+<h1>我用 AI 把一门斯坦福课程翻成中文，全程 7 分 47 秒</h1>
+<blockquote>标题候选（A/B 测试用）：<br>1. 我用 AI 把一门斯坦福课程翻成中文，全程 7 分 47 秒<br>2. 21038 字、342 行，7 分 47 秒：一次真实的 AI 课程翻译<br>3. 别再用 AI 一键翻译了，这样用才不出错</blockquote>
+<hr>
+<h2>一、先说结论</h2>
+<p>一门斯坦福的 Vibe Coding 课程，21038 个字符、342 行，从抓取到翻译到校验到发布，全流程 <strong>7 分 47 秒</strong>。</p>
+<p>但这个数字不是重点。<strong>重点是：如果我只把「翻译」交给 AI，这事一定做砸。</strong> 真正花时间的不是翻译，是「怎么知道它翻对了」。</p>
+<p>下面是我完整的做法，包括三个我踩过的坑。</p>
+<hr>
+<h2>二、为什么不能「一键翻译」</h2>
+<p>第一次我偷懒，直接把整份英文原文丢给 AI，说「翻译成中文」。</p>
+<p>结果有三个问题：</p>
+<ol><li><strong>术语前后不一致</strong>：同一个 <code>prompt</code>，第一段叫「提示词」，第五段叫「提示」，第十段叫「指令」。</li><li><strong>格式塌了</strong>：原文里的标题层级、代码块、表格，翻译后变成一团。</li><li><strong>没法核对</strong>：AI 翻完你只能整篇读一遍，读到第三千字就困了，剩下的靠「感觉没问题」。</li></ol>
+<p><strong>一键翻译的本质问题是：它给你一个结果，却不给你任何可验证的中间状态。</strong></p>
+<p>所以我改成四阶段流水线，每个阶段都留证据。</p>
+<hr>
+<h2>三、四阶段流水线（附真实耗时）</h2>
+<table><thead><tr><th>阶段</th><th>做什么</th><th>真实耗时</th></tr></thead><tbody><tr><td>① 抓取归仓</td><td>定位一手来源，批量抓取，落盘存档</td><td>12:26:46–12:27:25（约 39 秒）</td></tr><tr><td>② 术语表先行</td><td>先让 AI 抽取术语，人工确认后冻结</td><td>12:27:25–12:29:12（约 1 分 47 秒）</td></tr><tr><td>③ 分段翻译</td><td>按段落切块，逐块翻译，带上术语表</td><td>12:30:01–12:31:55（约 1 分 54 秒）</td></tr><tr><td>④ 质量抽检</td><td>逐段核对字符数、术语一致性、格式完整性</td><td>12:33:56–12:34:33（约 37 秒）</td></tr></tbody></table>
+<p>合计约 <strong>7 分 47 秒</strong>。</p>
+<p>注意阶段 ② 的顺序：<strong>术语表必须在翻译之前冻结</strong>。</p>
+<p>这是整个流程里最关键的一个决定。AI 是记不住「全局一致性」的——它每一段都是独立生成的，你不告诉它「prompt 永远叫提示词」，它就会自由发挥。</p>
+<p>先冻结术语表，再翻译，一致性就从「靠运气」变成「靠约束」。</p>
+<hr>
+<h2>四、三个真实的坑</h2>
+<h3>坑 1：21038 和 21209 都不是错的</h3>
+<p>我第一次报字数，写的是 21209。后来发现：</p>
+<ul><li><strong>21209 是字节数</strong></li><li><strong>21038 是字符数</strong>（真正该报的）</li></ul>
+<p>中文一个字在 UTF-8 里占 3 个字节。混着报，看起来差得不多，但性质完全不同：一个说「文件多大」，一个说「内容多长」。</p>
+<p><strong>教训：报数字的时候，必须连单位一起报，并且自己先算一遍。</strong></p>
+<p>后来我把 README、日志、说明文档里所有出现的地方统一改成 <code>21038 字符 / 342 行</code>。四处修改，逐处核对。</p>
+<h3>坑 2：脚本跑通了，但什么都没输出</h3>
+<p>我在 Windows 上跑一个 Python 脚本，退出码是 <code>0</code>，看起来很成功——但一个文件都没写出来。</p>
+<p>查了很久才发现：<strong>这是本机「中文路径 + 非 ASCII 控制台输出」的崩溃模式</strong>，进程直接以 <code>0xC0000005</code>（3221225477）死掉，而且<strong>死之前不落任何日志</strong>。</p>
+<p>解决办法不是「修好它」，而是<strong>绕开它</strong>：</p>
+<ul><li>脚本源码保持纯 ASCII，中文只放在数据 JSON 里</li><li>控制台只打印 ASCII 统计行（例如 <code>RC=0 lines=342</code>）</li><li>明细写进 UTF-8 日志文件，再用工具读日志</li></ul>
+<p><strong>教训：当环境有确定的崩溃模式时，绕开比修复更划算。</strong></p>
+<h3>坑 3：PowerShell 吃掉了我的引号</h3>
+<p>提交前有个自查脚本需要传 JSON 参数。命令行里明明写对了，运行结果却报「参数不是合法 JSON」。</p>
+<p>原因：PowerShell 在把参数传给子进程时会重新解析引号，嵌套引号全被吃掉。</p>
+<p>解决办法：<strong>不用命令行传 JSON，改成 Python 端起进程、按精确 argv 传参</strong>。</p>
+<p><strong>教训：跨 shell 传结构化数据，永远别信引号。</strong></p>
+<hr>
+<h2>五、一个我差点漏掉的事：链接验证</h2>
+<p>课程里有 100 个外部链接。翻译完看着没问题，但我做了一轮真实请求验证：</p>
+<table><thead><tr><th>结果</th><th>数量</th></tr></thead><tbody><tr><td>自动通过</td><td>48</td></tr><tr><td>需要人工判断</td><td>44（LinkedIn 429/451、35 个不可达）</td></tr><tr><td>确认为失效</td><td>8（7 个 GitHub 404 + 1 个 Figma 404）</td></tr></tbody></table>
+<p><strong>如果没做这一步，交付物里会有 8 个死链接，而我自己完全不知道。</strong></p>
+<p>自动化能覆盖一半，剩下的一半必须人工判断——因为「429 限流」不等于「链接坏了」，「451 因法律原因不可用」也不等于「你写错了」。</p>
+<hr>
+<h2>六、结果</h2>
+<ul><li>中文覆盖率、术语一致率、格式完整性都逐项核对过</li><li>交付物公开在 GitHub：<code>github.com/Leo-web-lhy/c1-stanford-vibe-coding</code></li><li>AI 初评 91 分（满分 100）</li></ul>
+<p>但我觉得真正有价值的不是 91 分，是这套流程<strong>可复用</strong>：</p>
+<p>换任何一份英文长文档，把术语表换掉、把分段规则调一下，同一套四阶段流水线直接能跑。</p>
+<hr>
+<h2>七、你可以直接拿走的三个动作</h2>
+<ol><li><strong>别让 AI 一次性翻全文</strong>。先抽术语表，人工确认，冻结，再分段翻。</li><li><strong>每一个数字都带单位</strong>。字符数、字节数、行数，混着说就会错。</li><li><strong>报「完成」之前，先做一次可复现的校验</strong>。链接真请求一遍，字符真数一遍，别靠「看起来对」。</li></ol>
+<hr>
+<p><strong>最后问你一个问题：</strong></p>
+<p>你有没有过这种经历——AI 告诉你「已完成」，你信了，交上去才发现一半是空的？你当时是怎么发现的？</p>
+<p>评论区聊聊，我下一篇会写我自己最惨的一次。</p>
+<hr>
+<p><em>本文基于真实项目记录撰写，数据均可核对。参考来源见文末 ATTRIBUTION 说明。</em></p>
+</article>
+<footer>C7 内容传播 · 学号 2023108610260 · 内容与数据均可核验</footer>
+</main>
+</body>
+</html>
